@@ -20,6 +20,11 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 private:
+	UPROPERTY(EditAnyWhere)
+	float CrossHairXLocation = 0.5f;
+	UPROPERTY(EditAnyWhere)
+	float CrossHairYLocation = 0.33333f;
+
 	ATank* GetControlledTank() const;
 
 	// Start the tank moving the barrel so that a shot would hit where
