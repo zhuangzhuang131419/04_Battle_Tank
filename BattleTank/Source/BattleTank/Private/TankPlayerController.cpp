@@ -4,7 +4,6 @@
 #include "Tank.h"
 
 
-
 void ATankPlayerController::BeginPlay()
 {
 	Super::BeginPlay();
@@ -16,10 +15,8 @@ void ATankPlayerController::BeginPlay()
 	}
 	else
 	{
-		UE_LOG(LogTemp, Warning, TEXT("PlayerController possessing: %s."), *ControlledTank->GetName());
+		UE_LOG(LogTemp, Warning, TEXT("PlayerController possessing: %s."), *(ControlledTank->GetName()));
 	}
-	UE_LOG(LogTemp, Warning, TEXT("PlayerController Begin Play"));
-	
 }
 
 void ATankPlayerController::Tick(float DeltaTime) 
@@ -41,7 +38,6 @@ void ATankPlayerController::AimTowardsCrosshair()
 	if (GetSightRayHitLocation(HitLocation)) // Has "side-effect", is going to line trace
 	{
 		GetControlledTank()->AimAt(HitLocation);
-		// TODO Tell controlled tank to aim at this point
 	}
 }
 

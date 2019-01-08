@@ -3,6 +3,7 @@
 #include "TankAIController.h"
 #include "Tank.h"
 
+
 void ATankAIController::BeginPlay()
 {
 	Super::BeginPlay();
@@ -23,7 +24,7 @@ void ATankAIController::Tick(float DeltaTime)
 
 		// Aim towards the player
 		ControlledTank->AimAt(PlayerTank->GetActorLocation());
-		UE_LOG(LogTemp, Warning, TEXT("TankAI AimAt %s."), *PlayerTank->GetActorLocation().ToString())
+		// UE_LOG(LogTemp, Warning, TEXT("TankAI AimAt %s."), *PlayerTank->GetActorLocation().ToString())
 
 		ControlledTank->Fire();// TODO don't fire every frame
 	}
