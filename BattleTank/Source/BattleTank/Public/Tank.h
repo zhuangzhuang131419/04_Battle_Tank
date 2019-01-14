@@ -35,6 +35,7 @@ private:
 	UPROPERTY(EditAnyWhere, Category = "Setup")
 	TSubclassOf<AProjectile> ProjectileBlueprint;
 
+	// TODO remove once firing is moved to aiming component
 	UPROPERTY(EditAnyWhere, Category = "Firing")
 	float LaunchSpeed = 4000.0;
 
