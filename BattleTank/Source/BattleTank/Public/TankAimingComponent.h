@@ -37,7 +37,7 @@ public:
 
 protected:
 	UPROPERTY(BlueprintReadOnly, Category = "State")
-	EFiringState FiringState = EFiringState::Locked;
+	EFiringState FiringState = EFiringState::Reloading;
 
 private:
 	// Sets default values for this component's properties
@@ -55,7 +55,7 @@ private:
 	UTankTurret* Turret = nullptr;
 
 	UPROPERTY(EditAnyWhere, Category = "Firing")
-	float LaunchSpeed = 4000.0;
+	float LaunchSpeed = 20000.0;
 
 	UPROPERTY(EditAnyWhere, Category = "Setup")
 	TSubclassOf<AProjectile> ProjectileBlueprint;
