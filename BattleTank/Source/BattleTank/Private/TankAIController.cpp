@@ -22,6 +22,7 @@ void ATankAIController::Tick(float DeltaTime)
 
 	// Move towards the player
 	MoveToActor(PlayerTank, AcceptanceRadius); // TODO check radius is in cm
+	UE_LOG(LogTemp, Warning, TEXT("HI"))
 
 	// Aim towards the player
 	auto AimingComponent = ControlledTank->FindComponentByClass<UTankAimingComponent>();
