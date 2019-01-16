@@ -61,9 +61,6 @@ Intermediate/*
 # Cache files for the editor to use
 DerivedDataCache/*
 
-# ignore StarterContent
-Content/StarterContent
-
 # ignore Battle Ground With High details
 Content/BattleGround_Hi.umap
 Content/BattleGround_Hi_BuiltData.uasset
