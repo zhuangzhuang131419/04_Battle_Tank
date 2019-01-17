@@ -57,6 +57,9 @@ private:
 
 	bool IsBarrelMoving();
 
+	UFUNCTION(BlueprintCallable, Category = "Firing")
+	void setProjectileBlueprint(TSubclassOf<AProjectile> projectile);
+
 	UTankBarrel* Barrel = nullptr;
 	UTankTurret* Turret = nullptr;
 
@@ -70,7 +73,7 @@ private:
 	float ReloadTimeInSeconds = 3;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Firing")
-	int32 RoundsLeft = 3;
+	int32 RoundsLeft = 20;
 
 	double LastFireTime = 0;
 

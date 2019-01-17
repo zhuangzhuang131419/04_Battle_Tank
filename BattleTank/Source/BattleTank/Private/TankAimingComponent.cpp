@@ -69,6 +69,11 @@ bool UTankAimingComponent::IsBarrelMoving()
 	return !BarrelForward.Equals(AimDirection, 0.01); // vectors are equal
 }
 
+void UTankAimingComponent::setProjectileBlueprint(TSubclassOf<AProjectile> projectile)
+{
+	ProjectileBlueprint = projectile;
+}
+
 void UTankAimingComponent::AimAt(FVector HitLocation)
 {
 	if (!ensure(Barrel)) { return; }

@@ -19,6 +19,8 @@ public:
 	void Elevate(float RelativeSpeed);
 
 private:
+	UTankBarrel();
+
 	UPROPERTY(EditDefaultsOnly, Category = "Setup")
 	float MaxDegreesPerSecond = 10;  
 	
